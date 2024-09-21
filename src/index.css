@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
+
+*{
+    font-family: "Manrope", sans-serif;
+}
+
+#heroBack{
+    background: url(assets/bg-hero-squiggle.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+#heroTwos{
+    position: relative;
+    overflow: hidden;
+}
+
+#heroTwos::after{
+    content: '';
+    background: url(assets/illustration-hero-left.svg);
+    position: absolute;
+    height: 26rem;
+    width: 26rem;
+    left: 0;
+    top: 50%;
+    transform: translate(-10%,-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#heroTwos::before{
+    content: '';
+    background: url(assets/illustration-hero-right.svg);
+    position: absolute;
+    height: 26rem;
+    width: 26rem;
+    right: 0;
+    top: 50%;
+    transform: translate(10%,-50%);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.kiram{
+    display: none;
+}
+
+#needback::after{
+    content: '';
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background: url(assets/icon-free.svg);
+    background-repeat: no-repeat;
+    top: -3.5rem;
+    left: 0;
+}
+
+#needbacktwo::after{
+    content: '';
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    background: url(assets/icon-paid.svg);
+    background-repeat: no-repeat;
+    top: -4.2rem;
+    left: 0;
+}
+
+#help{
+    background: url(assets/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0rem 10rem; 
+}
+
+.google{
+    border-color: lightgreen;
+}
+
+/* responsive */
+
+@media (max-width:1024px) {
+    #option{
+        flex-direction: column;
+        gap: 2.5rem;
+        justify-content: center;
+        padding: 0rem ;
+        margin: 1rem;
+    }  
+    #box1{
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        max-width: fit-content;
+        align-items: center;
+    }
+    #box1child{
+        margin-top: 0;
+    }
+    #box1 p{
+        max-width: 20rem;
+    }
+    #box2{
+        flex-direction: row;
+        top: 0;
+        right: 3rem;
+        align-items: center;
+        gap: 2rem;
+        max-width: fit-content;
+    }
+    #box2child{
+        margin-top: 0;
+    }
+    #box2 p{
+        max-width: 20rem;
+    }
+    #box3{
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        max-width: fit-content;
+    }
+    #box3child{
+        margin-top: 0;
+    }
+    #box3 p{
+        max-width: 20rem;
+    }
+    #box4{
+        flex-direction: row;
+        top: 0;
+        right: 3rem;
+        align-items: center;
+        gap: 2rem;
+        max-width: fit-content;
+    }
+    #box4child{
+        margin-top: 0;
+    }
+    #box4 p{
+        max-width: 20rem;
+    }
+    #kale{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    #cont{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+        margin: 1rem;
+    }
+    #padRemove{
+        padding: 0;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+        width: 100%;
+    }
+    #padRem{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    #ull{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width:768px) {
+    #logo{
+        justify-content: center;    
+    }
+    #heroTwos::after{
+        content: '';
+        z-index: -100;
+    }
+    #heroTwos::before{
+        content: '';
+        z-index: -100;
+    }
+    #box2{
+        right: 0;
+    }
+    #box4{
+        right: 0;
+    }
+    #heroBack{
+        margin-top: 15rem;
+    }
+    #kos{
+        font-size: 2rem;
+        width: max-content;
+    }
+    #kos2{
+        width:fit-content;
+    }
+    #heroBack{
+        background: none;
+    }
+    #heroBack::before{
+        content: '';
+        background: url(assets/illustration-hero-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        top: -15rem;
+        width: 100%;
+        position: absolute;
+    }
+    #foot{
+        flex-direction: column
+    }
+    #btn{
+        margin-top: 0.2rem;
+        width: 100%;
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
